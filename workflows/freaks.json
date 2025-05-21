@@ -9,7 +9,7 @@
       "cfg": 5.61,
       "sampler_name": "euler",
       "scheduler": "karras",
-      "denoise": 0,
+      "denoise": 0.5500000000000002,
       "model": [
         "35",
         1
@@ -34,7 +34,7 @@
   },
   "6": {
     "inputs": {
-      "text": "woman, long blond hair, (((big lips))), twins, same faces, clones, highly detailed, 8k, fujifilm, sharpness.",
+      "text": "happy people, rave party, near future, by Diane Arbus, photography , fujifilm,",
       "clip": [
         "35",
         2

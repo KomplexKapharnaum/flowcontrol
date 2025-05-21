@@ -19,6 +19,13 @@ var looping = false;
 var loopPromise = null;
 var startTime = null;
 
+console.log("\n====== Flow Control ======\n");
+console.log("OSC Port In:", OSC_PORTIN);
+console.log("OSC Port Out:", OSC_PORTOUT);
+console.log("ComfyUI Server:", COMFYUI_SERVER);
+console.log("Workflow Path:", WORKFLOW_PATH);
+console.log("")
+
 // Recursive function to replace "$RANDOM$" string with random number
 function replaceRandomNumbers(obj) {
   if (typeof obj === 'string') {

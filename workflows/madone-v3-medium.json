@@ -9,7 +9,7 @@
       "cfg": 5.61,
       "sampler_name": "euler",
       "scheduler": "karras",
-      "denoise": 0,
+      "denoise": 0.45000000000000007,
       "model": [
         "35",
         1
