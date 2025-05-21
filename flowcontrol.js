@@ -5,13 +5,13 @@ const axios = require('axios');
 const path = require('path');
 
 // .env configuration
-const OSC_PORT = process.env.OSC_PORT || 9000;
-const COMFYUI_SERVER = process.env.COMFYUI_SERVER || '127.0.0.1';
-const COMFYUI_PORT = process.env.COMFYUI_PORT || 8188;
+const OSC_PORTIN = process.env.OSC_PORTIN || 9000;
+const OSC_PORTOUT = process.env.OSC_PORTOUT || 9001;
+const COMFYUI_SERVER = process.env.COMFYUI_SERVER || '127.0.0.1:8188';
 const WORKFLOW_PATH = path.resolve( process.env.WORKFLOW_PATH || './workflows' )
 
-const PROMPT_URL = `http://${COMFYUI_SERVER}:${COMFYUI_PORT}/prompt`;
-const QUEUE_URL = `http://${COMFYUI_SERVER}:${COMFYUI_PORT}/queue`;
+const PROMPT_URL = `http://${COMFYUI_SERVER}/prompt`;
+const QUEUE_URL = `http://${COMFYUI_SERVER}/queue`;
 
 const CLIENT_ID = Math.random().toString(36).substr(2, 9);
 
@@ -35,8 +35,8 @@ function replaceRandomNumbers(obj) {
 }
 
 // OSC server setup
-const oscServer = new Server(OSC_PORT, '0.0.0.0', () => {
-  console.log(`OSC Server is listening on port ${OSC_PORT}`);
+const oscServer = new Server(OSC_PORTIN, '0.0.0.0', () => {
+  console.log(`OSC Server is listening on port ${OSC_PORTIN}`);
 });
 
 oscServer.on('message', async (msg) => {
